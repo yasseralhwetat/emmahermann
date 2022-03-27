@@ -1,0 +1,14 @@
+---
+- hosts: 127.0.0.1 
+  remote_user: emma
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+  tasks:
+    - name: Create a httpd container
+      docker_container:
+        name: ansibleco
+        image: httpd
+        ports:
+         - "8080:80"
+        volumes:
+         - "/mnt:/mnt"
