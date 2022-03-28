@@ -1,4 +1,4 @@
-apiVersion: AppsV1beta1Deployment/Deployment
+apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
   name: httpd-site
