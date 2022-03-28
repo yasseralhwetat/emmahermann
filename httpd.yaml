@@ -1,4 +1,4 @@
-ApiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata: 
   name: httpd-site
@@ -21,7 +21,7 @@ spec:
        image: emmahourani/docker-from-jenkens
 ---
 
-apiVersion: v1
+apiVersion: apps/v1
 kind: Service
 metadata:
   creationTimestamp: null
