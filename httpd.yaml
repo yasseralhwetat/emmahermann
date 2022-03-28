@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: httpd-site
+  labels:
+     app: web
+spec:
+ replicas: 4
+ selector:
+  matchLabels:
+   app: web
+   os: linux
+ template:
+   metadata:
+     labels:
+      app: web 
+      os: linux
+   spec:
+     containers:
+     - name: web
+       image: emmahourani/docker-from-jenkens
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    ser: web
+    teir: public
+  name: httpd-site
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    os: linux
+    app: web
+  type: NodePort
+status:
+  loadBalancer: {}
