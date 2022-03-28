@@ -1,4 +1,4 @@
-apiVersion: io.kubernetes.client.openapi.models.AppsV1beta1Deployment
+apiVersion: AppsV1beta1Deployment/Deployment
 kind: Deployment
 metadata: 
   name: httpd-site
