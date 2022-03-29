@@ -1,5 +1,5 @@
 apiVersion: extensions/v1beta1
-kind: Deployment
+kind: Replica Set
 metadata: 
   name: httpd-site
   labels:
