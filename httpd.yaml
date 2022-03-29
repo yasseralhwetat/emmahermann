@@ -1,6 +1,6 @@
-apiVersion: extensions/v1beta1
-kind: ReplicaSet
-metadata: 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: httpd-site
   labels:
      app: web
@@ -13,7 +13,7 @@ spec:
  template:
    metadata:
      labels:
-      app: web 
+      app: web
       os: linux
    spec:
      containers:
