@@ -1,5 +1,5 @@
 apiVersion: extensions/v1beta1
-kind: Replica Set
+kind: ReplicaSet
 metadata: 
   name: httpd-site
   labels:
